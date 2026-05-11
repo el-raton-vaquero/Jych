@@ -20,8 +20,8 @@ export default async function ActividadDetail({ params }: { params: Promise<{ id
     llm_summary:
       "El historial del equipo indica que el último mantenimiento preventivo fue hace 30 días. Se sugiere especial atención a las bandas de transmisión debido a fallas previas similares en otros equipos del mismo lote.",
     preliminary_diagnosis: "N/A - Tarea programada",
-    scheduled_date: "2026-05-11T18:00:00Z",
-    created_at: "2026-05-01T10:00:00Z",
+    scheduled_date: "2026-05-16T14:00:00Z",
+    created_at: "2026-05-11T18:00:00Z",
   };
 
   const priorityBadge: Record<string, { bg: string; text: string; border: string }> = {

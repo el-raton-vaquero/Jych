@@ -136,9 +136,9 @@ export default function PrivilegioAunMenor() {
               <option value="" disabled>
                 Selecciona la maquinaria
               </option>
-              {[1, 2, 3, 4, 5, 6].map((n) => (
+              {[0,1, 2, 3, 4, 5, 6].map((n) => (
                 <option key={n} value={String(n)} style={{ color: "#6F421C" }}>
-                  Maquinaria {n}
+                  Motor Industrial X-20{n}
                 </option>
               ))}
             </select>

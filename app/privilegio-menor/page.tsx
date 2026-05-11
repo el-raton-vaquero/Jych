@@ -4,12 +4,12 @@ import Link from "next/link";
 const mockMyTasks = [
   {
     id: 101,
-    task_type: "PREVENTIVE",
+    task_type: "CORRECTIVE",
     priority: "HIGH",
-    description: "Revisión mensual del motor principal en la línea 1.",
+    description: "Revisión de bomba de agua del motor en linea 1.",
     status: "PENDING",
     equipment_name: "Motor Industrial X-200",
-    scheduled_date: "2026-05-15T08:00:00Z",
+    scheduled_date: "2026-05-11T018:00:00Z",
   },
   {
     id: 102,
@@ -24,15 +24,15 @@ const mockMyTasks = [
 
 const priorityBadge: Record<string, { bg: string; color: string; border: string }> = {
   CRITICAL: { bg: "#fdecea", color: "#c0392b", border: "#f5c6c6" },
-  HIGH:     { bg: "#FFF0DC", color: "#8B5B34", border: "#e8c99a" },
-  MEDIUM:   { bg: "#fffbe6", color: "#856404", border: "#ffe58f" },
-  LOW:      { bg: "#eaf6ee", color: "#276749", border: "#b2dfca" },
+  HIGH: { bg: "#FFF0DC", color: "#8B5B34", border: "#e8c99a" },
+  MEDIUM: { bg: "#fffbe6", color: "#856404", border: "#ffe58f" },
+  LOW: { bg: "#eaf6ee", color: "#276749", border: "#b2dfca" },
 };
 
 const statusBadge: Record<string, { bg: string; color: string; border: string; label: string }> = {
-  PENDING:     { bg: "#FFF8EE", color: "#8B5B34", border: "#BF8B5C55", label: "Pendiente" },
+  PENDING: { bg: "#FFF8EE", color: "#8B5B34", border: "#BF8B5C55", label: "Pendiente" },
   IN_PROGRESS: { bg: "#e8f0fe", color: "#1a56a0", border: "#c3d7fa", label: "En Progreso" },
-  COMPLETED:   { bg: "#eaf6ee", color: "#276749", border: "#b2dfca", label: "Completada" },
+  COMPLETED: { bg: "#eaf6ee", color: "#276749", border: "#b2dfca", label: "Completada" },
 };
 
 const taskTypeTranslations: Record<string, string> = {

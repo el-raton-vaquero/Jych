@@ -13,9 +13,9 @@ const mockTechnicians = [
     tasks: [
       {
         id: 101,
-        task_type: "PREVENTIVE",
+        task_type: "CORRECTIVE",
         priority: "HIGH",
-        description: "Revisión mensual del motor principal en la línea 1.",
+        description: "Revisión de bomba de agua del motor en linea 1.",
         status: "PENDING",
         equipment_name: "Motor Industrial X-200",
         scheduled_date: "2026-05-15T08:00:00Z",
@@ -61,9 +61,9 @@ const mockTechnicians = [
 
 const priorityBadge: Record<string, { bg: string; color: string; border: string }> = {
   CRITICAL: { bg: "#fdecea", color: "#c0392b", border: "#f5c6c6" },
-  HIGH:     { bg: "#FFF0DC", color: "#8B5B34", border: "#e8c99a" },
-  MEDIUM:   { bg: "#fffbe6", color: "#856404", border: "#ffe58f" },
-  LOW:      { bg: "#eaf6ee", color: "#276749", border: "#b2dfca" },
+  HIGH: { bg: "#FFF0DC", color: "#8B5B34", border: "#e8c99a" },
+  MEDIUM: { bg: "#fffbe6", color: "#856404", border: "#ffe58f" },
+  LOW: { bg: "#eaf6ee", color: "#276749", border: "#b2dfca" },
 };
 
 const taskTypeTranslations: Record<string, string> = {
@@ -158,9 +158,8 @@ export default function PrivilegioMayor() {
 
               {/* Tareas expandibles */}
               <div
-                className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                  expandedTech === tech.id ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-0"
-                }`}
+                className={`overflow-hidden transition-all duration-300 ease-in-out ${expandedTech === tech.id ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-0"
+                  }`}
                 style={{ background: "#FFF8EE" }}
               >
                 <div className="space-y-4 p-6">

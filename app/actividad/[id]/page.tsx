@@ -6,10 +6,10 @@ export default async function ActividadDetail({ params }: { params: Promise<{ id
 
   const mockTask = {
     id: id,
-    task_type: "PREVENTIVE",
+    task_type: "CORRECTIVE",
     priority: "HIGH",
     description:
-      "Revisión mensual del motor principal en la línea 1. Se requiere verificar niveles de aceite, desgaste de bandas y realizar limpieza general del sistema de ventilación.",
+      "Revisión de bomba de agua del motor en linea 1. Nivel de agua bajo",
     status: "PENDING",
     equipment_name: "Motor Industrial X-200",
     equipment_type: "Mecánico",
@@ -20,21 +20,21 @@ export default async function ActividadDetail({ params }: { params: Promise<{ id
     llm_summary:
       "El historial del equipo indica que el último mantenimiento preventivo fue hace 30 días. Se sugiere especial atención a las bandas de transmisión debido a fallas previas similares en otros equipos del mismo lote.",
     preliminary_diagnosis: "N/A - Tarea programada",
-    scheduled_date: "2026-05-15T08:00:00Z",
+    scheduled_date: "2026-05-11T18:00:00Z",
     created_at: "2026-05-01T10:00:00Z",
   };
 
   const priorityBadge: Record<string, { bg: string; text: string; border: string }> = {
     CRITICAL: { bg: "#fdecea", text: "#c0392b", border: "#f5c6c6" },
-    HIGH:     { bg: "#FFF0DC", text: "#8B5B34", border: "#e8c99a" },
-    MEDIUM:   { bg: "#fffbe6", text: "#856404", border: "#ffe58f" },
-    LOW:      { bg: "#eaf6ee", text: "#276749", border: "#b2dfca" },
+    HIGH: { bg: "#FFF0DC", text: "#8B5B34", border: "#e8c99a" },
+    MEDIUM: { bg: "#fffbe6", text: "#856404", border: "#ffe58f" },
+    LOW: { bg: "#eaf6ee", text: "#276749", border: "#b2dfca" },
   };
 
   const statusBadge: Record<string, { bg: string; text: string; border: string }> = {
-    PENDING:     { bg: "#FFF8EE", text: "#8B5B34", border: "#BF8B5C55" },
+    PENDING: { bg: "#FFF8EE", text: "#8B5B34", border: "#BF8B5C55" },
     IN_PROGRESS: { bg: "#e8f0fe", text: "#1a56a0", border: "#c3d7fa" },
-    COMPLETED:   { bg: "#eaf6ee", text: "#276749", border: "#b2dfca" },
+    COMPLETED: { bg: "#eaf6ee", text: "#276749", border: "#b2dfca" },
   };
 
   const taskTypeTranslations: Record<string, string> = {
